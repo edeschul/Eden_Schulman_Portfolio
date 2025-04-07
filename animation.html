@@ -29,59 +29,8 @@
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/jsoJDWxhUT0?si=1aQiMhH66SMvEbKH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <p>This is an animation about one of my classmates, done in mixed media.</p>
-  <button id="toggleButton" style="color: white;">&#9654;</button>
 </div>
 
-<script>
-
-const video = document.getElementById("myVideo");
-const toggleButton = document.getElementById("toggleButton");
-const videoContainer = document.getElementById("videoContainer");
-
-let isPlaying = false;
-
-toggleButton.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    isPlaying = true;
-    toggleButton.innerHTML = "&#9208;"; // Pause icon ⏸
-  } else {
-    video.pause();
-    isPlaying = false;
-    toggleButton.innerHTML = "&#9654;"; // Play icon ▶
-  }
-});
-
-// Show button on hover when video is playing
-videoContainer.addEventListener("mouseenter", () => {
-  if (isPlaying) {
-    toggleButton.classList.remove("hide");
-  }
-});
-
-// Hide button on mouse leave (only if video is playing)
-videoContainer.addEventListener("mouseleave", () => {
-  if (isPlaying) {
-    toggleButton.classList.add("hide");
-  }
-});
-
-// Hide button after short delay when video starts
-video.addEventListener("play", () => {
-  setTimeout(() => {
-    toggleButton.classList.add("hide");
-  }, 1000);
-});
-
-// Show play button when video ends
-video.addEventListener("ended", () => {
-  toggleButton.innerHTML = "&#9654;";
-  toggleButton.classList.remove("hide");
-  isPlaying = false;
-});
-
-
-  </script>
   
 </body>
 </html>
