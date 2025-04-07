@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qku3htk.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Here you can see my work, skills, and learn more about me.</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+        <div class="image-container">
+            <img src="artwork/selfPortrait.jpg" style="border-radius: 50%; height: auto; width: 50%;">
+            <p>Former student at Parsons School of Design, NY, and continuing my education at California College of the Arts, San Francsico, CA. I'm experienced in basic code (HTML, CSS, JS), creating visual typographic poster designs, animations, book designs, and more. Through my designs, I strive to create a visually compelling product for clear understanding and communication. </p>
+        </div>
+    </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+
+            <div class="project-card">
+                <a href="wikibook.html"><h3>WikiBook</h3></a>
+                <p>A 136-page, visually rich, perfect-bound, and exposed bound book exploring the story of The Beatles. Drawing from various sources and abundant imagery, the design features a lively layout. Typography combines bold, playful fonts with clean sans-serif typefaces. Each chapter is represented by a distinct color, culminating in a gallery dedication to The Beatles at the end.</p>
+            </div>
+
+            <div class="project-card">
+                <a href="mantraMerch.html"><h3>Mantra Merch</h3></a>  <!--mantra merch-->
+                <p>A design project centered on visually interpretating a chosen mantra. The mantra "inspiration; not intimidation" is represented through a hand-drawn playful typeface, vibrant colors with accents of black and white, and additional elements to convey an uplifting and inspiring vibe. The designs are applied to mockup tote bags, T-shirts, and posters.</p>
+            </div>
+
+            <div class="project-card">
+                <a href="manifesto.html"><h3>Manifesto Poster</h3></a> <!--manifesto Poster-->
+                <p>A two-piece dynamic poster series based on the manifesto The Laws of Simplicity by John Maeda. One poster summarizes the manifesto’s main objectives, while the other promotes a related event. Designed  Adobe Illustrator, the project is limited to three colors and two typefaces. A retro color palette was chosen, featuring a bold, stylized typeface paired with a clean sans-serif typeface for contrast.</p>
+            </div>
+
+            <div class="project-card">
+                <a href="skyMap.html"><h3>Sky Map</h3></a> <!--Sky map-->
+                <p>A thoughtfully designed 24" x 36" poster presents celestial data on The Big Bang, structured within a precise grid system to ensure clarity and organization. Through the strategic use of typographic tools, hierarchical structuring, and visual composition, the design seeks to evoke the experience of The Big Bang. A dark background reinforces the vastness of space, while contrasting hues highlight key information, enhancing both readability and visual impact.</p>
+            </div>
+
+            <div class="project-card">
+                <a href="homeBook.html"><h3>Home Book</h3></a> <!--home book-->
+                <p>A 32-page saddle-stitched book exploring the meaning of "home." Each page features hand-drawn illustrations representing the significance of Shabbat, along with my personal tribute to the concept. </p>
+            </div>
+
+            <div class="project-card">
+                <a href="wonderland.html"><h3>Underwater Wonderland Website</h3></a> <!--Underwater wonderland site-->
+                <p>A website developed using HTML and CSS that explores the various ocean zones and their corresponding marine life. Each section of the site is dedicated to a specific ocean layer, allowing users to engage with interactive elements for an immersive experience. The use of a playful sans-serif typeface combined with vibrant visuals creates an inviting and engaging atmosphere, encouraging users to learn about and explore the depths of the ocean. </p>
+            </div>
+
+            <div class="project-card">
+                <a href="artwork.html"><h3>Artwork</h3></a> <!---->
+                <p>Compilation of my past art assignments at Parsons, and personal projects.</p>
+            </div>
+
+            <div class="project-card">
+                <a href="animation.html"><h3>Animations</h3></a> <!--figma sketches-->
+                <p>Animations I created.</p>
+            </div>
+        </div>
+
+    </section>
+
+<div class="social-icons">
+   <a href="https://www.instagram.com/e.alexia.schul?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+        <img src="https://cdn.freebiesupply.com/images/large/2x/instagram-logo-black-transparent.png" alt="Instagram">
+   </a>
+   <a href="https://www.linkedin.com/in/eden-schulman-38059033b/">
+        <img src="https://static.vecteezy.com/system/resources/previews/023/986/569/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn">
+   </a>
+</div>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/xpwpojed" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio | Designed by Eden Schulman</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+.buttonBack {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    width: auto;
+    font-size: 12px;
+    z-index: 32;
+
+}
+
+a {
+    position: relative;
+    text-align: left;
+    padding: 10px;
+    text-decoration: none;
+    color: #3d524c;
+    font-size: 30px;
+}
+
+a:hover {
+    color: #f4f0e0;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #c6cd85; /* Green background */
+    padding: 40px; /* Padding to give it some space */
+    text-align: center; /* Centers the text */
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold; /* Makes the text bold */
+    position: absolute; /* Position it absolutely at the top */
+    top: 0;
+    width: 100%; /* Make sure it spans the full width of the screen */
+    margin: 0; /* Remove default margin */
+    font-family: 'contralto-big', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 50px;
+    color: #3d524c;
+    height: 18%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #f4f0e0;
+    } 
+
+/*book*/
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+    margin-top: 100px;
+}
+
+img {
+    position: relative;
+    width: 350px;
+    height: 500px;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front, 
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.7s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid #f4f0e0;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content, .back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(-180deg);
+}
+
+/*paper flipped*/
+.flipped .front, 
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/*button controls*/
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.7s;
+    margin-top: 100px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    color: black;
+}
+
+i {
+    font-size: 50px;
+    color: #333;
+}
+
+/*paper stack order*/
+#p1 {
+    z-index: 16; /*132*/
+}
+
+#p2 {
+    z-index: 15;
+}
+
+#p3 {
+    z-index: 14;
+}
+
+#p4 {
+    z-index: 13;
+}
+
+#p5 {
+    z-index: 12;
+}
+
+#p6 {
+    z-index: 11;
+}
+
+#p7 {
+    z-index: 10;
+}
+
+#p8 {
+    z-index: 9;
+}
+
+#p9 {
+    z-index: 8;
+}
+
+#p10 {
+    z-index: 7;
+}
+
+#p11 {
+    z-index: 6;
+}
+
+#p12 {
+    z-index: 5;
+}
+
+#p13 {
+    z-index: 4;
+}
+
+#p14 {
+    z-index:3;
+}
+
+#p15 {
+    z-index: 2;
+}
+
+#p16 {
+    z-index: 1;
+}
+

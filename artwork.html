@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork</title>
+    <link rel="stylesheet" href="artwork.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qku3htk.css">
+
+</head>
+<body>
+
+<div class="buttonBack">
+    <a href="index.html"> &#8592;</a>
+</div>
+
+<div class="header">
+    <h1>Artwork</h1>
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <div id="caption"></div>
+</div>
+
+    <div class="gallery">
+          <img src="artwork/charcoal.JPG" alt="Charcoal Still life" onclick="openModal(this)">
+        <div class="desc">Still life done in charcoal</div>
+      </div>
+      
+      <div class="gallery">
+          <img src="artwork/noodle.JPG" alt="Ramen Noodle painting" onclick="openModal(this)">
+        <div class="desc">Ramen noodle still life done with acrylic paint</div>
+      </div>
+      
+      <div class="gallery">
+          <img src="artwork/selfportraitPencil.JPG" alt="Self portrait" onclick="openModal(this)">
+        <div class="desc">Self portrait done in Prismacolor pencils</div>
+      </div>
+      
+      <div class="gallery">
+          <img src="artwork/portrait.png" alt="Self identity poster" onclick="openModal(this)">
+        <div class="desc">A self portrait defining my identity, done on Adobe Illustrator</div>
+      </div>
+
+    <div class="gallery">
+        <img src="artwork/headpiece2.JPG" alt="Headpiece" onclick="openModal(this)">
+      <div class="desc">A memory headpiece created with mixed media</div>
+    </div>
+
+    <div class="gallery">
+        <img src="artwork/selfportraitFrame.JPG" alt="Self portrait" onclick="openModal(this)">
+      <div class="desc">A self portrait framed in a wooden frame that I created. Done with mixed media.</div>
+    </div>
+
+
+
+
+
+
+
+
+
+<script>
+function openModal(img, video) {
+    let modal = document.getElementById("imageModal");
+    let modalImg = document.getElementById("fullImage");
+    let captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+
+    // Close the modal when clicking on (x)
+    document.querySelector(".close").onclick = function() {
+        modal.style.display = "none";
+    };
+}
+</script>
+
+
+</body>
+</html>
