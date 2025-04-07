@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qku3htk.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Animations</h1>
+</div>
+
+<div class="buttonBack">
+    <a href="portfolio.html"> &#8592;</a>
+</div>
+
+
+<div class="video1">
+    <video id="myAnimation" width="640" height="360" autoplay muted loop>
+        <source src="artwork/FoxEyeAnimation.mp4" alt="Fox eye trend animation" type="video/mp4">
+    </video>
+    <p>This animation highlights the offensiveness behind the fox eye trend that flourished on social media. Done in Adobe Photoshop, I asked some of my class peers to replicate the trend, cut and combined the videos together to create one cohesive loop, and finally, creating frames from the video to create the animatinon. </p>
+</div>
+
+<div class="video-container" id="videoContainer">
+  <video id="myVideo" width="640" height="360">
+      <source src="artwork/The Daydream_1.mp4" alt="The Daydream animation" type="video/mp4">
+  </video>
+  <p>This is an animation about one of my classmates, done in mixed media.</p>
+  <button id="toggleButton" style="color: white;">&#9654;</button>
+</div>
+
+<script>
+
+const video = document.getElementById("myVideo");
+const toggleButton = document.getElementById("toggleButton");
+const videoContainer = document.getElementById("videoContainer");
+
+let isPlaying = false;
+
+toggleButton.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    isPlaying = true;
+    toggleButton.innerHTML = "&#9208;"; // Pause icon ⏸
+  } else {
+    video.pause();
+    isPlaying = false;
+    toggleButton.innerHTML = "&#9654;"; // Play icon ▶
+  }
+});
+
+// Show button on hover when video is playing
+videoContainer.addEventListener("mouseenter", () => {
+  if (isPlaying) {
+    toggleButton.classList.remove("hide");
+  }
+});
+
+// Hide button on mouse leave (only if video is playing)
+videoContainer.addEventListener("mouseleave", () => {
+  if (isPlaying) {
+    toggleButton.classList.add("hide");
+  }
+});
+
+// Hide button after short delay when video starts
+video.addEventListener("play", () => {
+  setTimeout(() => {
+    toggleButton.classList.add("hide");
+  }, 1000);
+});
+
+// Show play button when video ends
+video.addEventListener("ended", () => {
+  toggleButton.innerHTML = "&#9654;";
+  toggleButton.classList.remove("hide");
+  isPlaying = false;
+});
+
+
+  </script>
+  
+</body>
+</html>
