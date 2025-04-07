@@ -93,6 +93,7 @@ p {
     justify-content: center;
     padding-top: 100px;
     padding-left: 60px;
+    z-index: 1;
 }
 
 #myAnimation {
